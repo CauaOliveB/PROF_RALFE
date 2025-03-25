@@ -1,0 +1,23 @@
+:root {
+    --cinza-claro :#404756;
+    --cinza-escuro1: #23272f;
+    --azul-claro: #58C4DC;
+    --preto: #000;
+    --branco: #fff;
+    
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.alumni-sans{
+    font-family: "Alumni Sans", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 200;
+    font-style:normal;
+  }
+  
