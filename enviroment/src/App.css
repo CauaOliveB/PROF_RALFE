@@ -1,10 +1,16 @@
 :root {
-    --cinza-claro :#404756;
-    --cinza-escuro1: #23272f;
-    --azul-claro: #58C4DC;
-    --preto: #000;
-    --branco: #fff;
-    
+    --Light-Cyan :#CAF0F8;
+    --Non-Photo-Blue: #ADE8F4;
+    --Marian-Blue: #023e8a;
+    --Honolulu-Blue: #0077B6;
+    --Rose: #F72585;
+    --Fandango: #B5179E;
+    --Grape: #7209B7;
+    --Dark-Blue: #480CA8;
+    --Chrysler-Blue: #560BAD;
+    --Zaffre: #3A0CA3;
+    --Preto: #000;
+    --Branco: #fff;
 }
 
 *{

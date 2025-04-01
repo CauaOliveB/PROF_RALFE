@@ -1,36 +1,21 @@
-import styles from './Login.module.css'
+import styles from './Teachers.module.css'
 
+const teachersSchema = z.object({
 
-const loginSchema = z.object({
-    Email: z.string()
-        .email({message: 'Informe um e-mail válido!'}),
-
-    Senha: z.string()
-        .length(6, {message: 'Defina uma senha de 6 caracteres!'})
+    NI: z.string()
+        .length(6, {message: 'Coloque seu NI de 6 caracteres!'})
 })
 
-export function Login(){
-
-    const {register, handleSubmit, formState: {errors}} = useForm({resolver: zodResolver(loginSchema)})
-
-    function autenticarUsuario (data){
-        console.log(data.Email)
-        console.log(data.Senha)
-    }
-
-
+export function Teachers(){
     return(
         <div className={styles.container}>
-            <p className={styles.titulo}>Login</p>
+            <p className={styles.titulo}>Professores</p>
 
-            <form 
-                onSubmit={handleSubmit(autenticarUsuario)}
-                className={styles.formulario}
-            >
+            <form className={styles.formulario}>
 
                 <input
-                    {...register('Email')}
-                    placeholder='E-mail'
+                    {...register('NI')}
+                    placeholder='NI'
                     className={styles.campo} 
                 />
                 { errors.Email && (
