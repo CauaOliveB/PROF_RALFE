@@ -1,5 +1,7 @@
 import styles from './Login.module.css'
-
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
+import { zodResolver } from '@hookform/resolvers/zod';
 
 const loginSchema = z.object({
     Email: z.string()
