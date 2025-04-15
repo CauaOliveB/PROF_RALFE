@@ -2,6 +2,8 @@ import styles from './Login.module.css'
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useNavigate } from 'react-router';
+import { Rotas } from '../rotas/Rotas';
 
 const loginSchema = z.object({
     Email: z.string()
@@ -13,11 +15,15 @@ const loginSchema = z.object({
 
 export function Login(){
 
+    const navegacao = useNavigate()
+
     const {register, handleSubmit, formState: {errors}} = useForm({resolver: zodResolver(loginSchema)})
 
     function autenticarUsuario (data){
         console.log(data.Email)
         console.log(data.Senha)
+
+        navegacao('Initial')
     }
 
 

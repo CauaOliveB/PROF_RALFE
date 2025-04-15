@@ -1,6 +1,6 @@
 .grid_container{
-    background: rgb(0, 0, 0);
-    border: 1px solid black;
+    background: rgb(252, 252, 252);
+    
     display: grid;
     height: 100vh;
     gap: 2px;

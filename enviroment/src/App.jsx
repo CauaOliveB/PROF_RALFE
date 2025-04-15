@@ -1,12 +1,8 @@
-import { Initial } from "./pages/Initial";
-import { Login } from "./pages/Login/"
-import { Teachers } from "./pages/Teachers/"
-import { Reservation } from "./pages/Reservation/"
+import { Rotas} from './rotas/Rotas'
 
-export function App(){
-  return(
-    <div>
-      < Reservation />
-    </div>
+
+export function App() {
+  return (
+    <Rotas />
   )
 }

@@ -4,6 +4,7 @@ import { RiBookShelfLine } from "react-icons/ri";
 import { HiAcademicCap } from "react-icons/hi2";
 import { SiGoogleclassroom } from "react-icons/si";
 import { RiCalendarScheduleLine } from "react-icons/ri";
+import {Link} from 'react-router'
 
 export function Aside(){
     return(
@@ -24,13 +25,27 @@ export function Aside(){
 
             <section className={styles.container.Botoes}>
 
-                <div className={styles.botao}><HiAcademicCap size={22} className={styles.icons}/>Professor</div>
+                <Link className={styles.botao} to={'/professor'}>
+                    <HiAcademicCap size={22} className={styles.icons}/>
+                    Professor
+                    
+                </Link>
 
-                <div className={styles.botao}><RiBookShelfLine size={22} className={styles.icons}/>Disciplina</div>
+                <Link className={styles.botao}>
+                    <RiBookShelfLine size={22} className={styles.icons}/>
+                    Disciplina
+                    {/* to={'/discipline'} */}
+                </Link>
                 
-                <div className={styles.botao}><SiGoogleclassroom size={22} className={styles.icons}/>Ambiente</div>
+                <Link className={styles.botao}>
+                    <SiGoogleclassroom size={22} className={styles.icons}/>
+                    Reserva
+                </Link>
                 
-                <div className={styles.botao}><RiCalendarScheduleLine size={22} className={styles.icons}/>Agendamento</div>
+                <Link className={styles.botao}>
+                    <RiCalendarScheduleLine size={22} className={styles.icons}/>Agendamento
+                    {/* to={'/classroom'} */}
+                </Link>
                 
             </section>
 
