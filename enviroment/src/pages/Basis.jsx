@@ -1,6 +1,6 @@
 import styles from './Basis.module.css'
 import { Button } from '../components/Button'
-import { Counter } from '../components/Counter'
+import * as Counter from '../components/Counter'
 export function Basis() {
     return (
         <div className={styles.container}>
@@ -9,26 +9,26 @@ export function Basis() {
             <div className={styles.containerButtons}>
                 <Button 
                 title='Login'
-                act={() => alert('Você clicou no Login')}
+                act={() => alert('Cliked in login')}
                 />
                 
                 <Button 
                 title='Register'
-                act={() => alert('Você clicou no Register')}
+                act={() => alert('Cliked in register')}
                 />
                 
                 <Button 
                 title='Sign out'
-                act={() => alert('VocÊ clicou no Sign out')}
+                act={() => alert('Cliked in Sign out')}
                 />
                 
                 <Button 
                 title='Ot'
-                act={() => alert('Você clicou no Ot')}
+                act={() => alert('Cliked in Ot')}
                 />
             </div>
 
-            <Counter />
+            <Counter.Counter />
         </div>
     )
 }

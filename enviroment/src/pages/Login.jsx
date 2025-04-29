@@ -7,10 +7,10 @@ import { Rotas } from '../rotas/Rotas';
 
 const loginSchema = z.object({
     Email: z.string()
-        .email({message: 'Informe um e-mail válido!'}),
+        .email({message: 'Provide a valid email address!'}),
 
-    Senha: z.string()
-        .length(6, {message: 'Defina uma senha de 6 caracteres!'})
+    Password: z.string()
+        .length(6, {message: 'Define a password with 6 characters!'})
 })
 
 export function Login(){
@@ -21,7 +21,7 @@ export function Login(){
 
     function autenticarUsuario (data){
         console.log(data.Email)
-        console.log(data.Senha)
+        console.log(data.Password)
 
         navegacao('Initial')
     }
@@ -48,8 +48,8 @@ export function Login(){
                 )}
 
                 <input
-                    {...register('Senha')}
-                    placeholder='Senha'
+                    {...register('Password')}
+                    placeholder='Password'
                     className={styles.campo} 
                 />
                 { errors.Senha && (
